@@ -125,12 +125,17 @@ class AssetsBuilder
         return $discoveryFileLoader->loadDiscoveryFile(new \SplFileInfo($path), $package->getName(), $packageDir);
     }
 
-    private function getInstallPath(PackageInterface $package) : string
+     
+    private function getInstallPath(PackageInterface $package) : ?string
     {
         if ($package instanceof RootPackageInterface) {
             return getcwd();
         } else {
-            return $this->installationManager->getInstallPath($package);
+            $path = $this->installationManager->getInstallPath($package);
+            if(!is_string($path) || empty($path) ){
+               $path = $package-> getTargetDir();
+            }
+            return $path;
         }
     }
 }
