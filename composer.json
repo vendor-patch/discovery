@@ -11,10 +11,10 @@
             "email": "d.negrier@thecodingmachine.com",
             "homepage": "http://mouf-php.com"
         }
-    ],    ,
+    ],    
 	"provide": {
 		"thecodingmachine/discovery": "dev-master"
-	}
+	},
     "require": {
     	"php": ">=7.2",
         "composer-plugin-api": "^1.0 || ^2.0"
