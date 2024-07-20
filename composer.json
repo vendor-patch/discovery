@@ -1,5 +1,5 @@
 {
-    "name": "thecodingmachine/discovery",
+    "name": "vendor-patch/discovery",
     "type": "composer-plugin",
     "description": "Publish and discover assets in your PHP projects.",
     "keywords": ["discovery", "assets"],
@@ -11,7 +11,10 @@
             "email": "d.negrier@thecodingmachine.com",
             "homepage": "http://mouf-php.com"
         }
-    ],
+    ],    ,
+	"provide": {
+		"thecodingmachine/discovery": "dev-master"
+	}
     "require": {
     	"php": ">=7.2",
         "composer-plugin-api": "^1.0 || ^2.0"
